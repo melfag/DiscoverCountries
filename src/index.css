@@ -1,0 +1,261 @@
+*, ::before, ::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+   background-color: wheat;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: black; 
+}
+ 
+::-webkit-scrollbar-thumb {
+  background: wheat; 
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.flag{
+  width: 100px;
+  height: 70px;
+}
+
+.country-grid{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+@media screen and (max-width: 1200px)  {
+  .country-grid{
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 1000px)  {
+  .country-grid{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 600px)  {
+  .country-grid{
+    grid-template-columns: 1fr;
+    justify-content: center;
+  }
+}
+
+.grid-items {
+  padding: 1rem;
+  margin: 1rem;
+  border: 2px solid black;
+  border-radius: 10px;
+  box-shadow: 5px 10px;
+}
+
+.grid-items:hover {
+  border-radius: 10px;
+  box-shadow: -5px -10px;
+  transition: 0.2s;
+}
+
+.country-info {
+  margin-top: 0.5rem;
+}
+
+.country-name{
+ font-weight: 800;
+ font-size: x-large;
+}
+
+.population, .capital {
+  font-weight: 700;
+  font-size: large;
+}
+
+.population-style, .capital-style {
+  font-weight: 400;
+  color: black;
+}
+
+nav {
+  display: flex;
+  align-self: flex-start;
+  padding: 1rem;
+  gap: 1rem;
+  font-size: x-large;
+  font-weight: 100;
+  text-transform: lowercase;
+}
+
+li {
+  padding: 0.3rem;
+  border: 2px solid black;
+  box-shadow: 4px 4px;
+  border-radius: 10px;
+  list-style: none;
+}
+li:hover {
+  border-radius: 10px;
+  box-shadow: -4px -4px;
+  transition: 0.2s all;
+}
+
+li:active {
+ transform: translate(0.05em, 0.05em);
+ box-shadow: 0.05em 0.05em;
+}
+
+a {
+  color: black;
+}
+ 
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.back-link {
+  padding: 0.3rem;
+  border: 2px solid black;
+  box-shadow: 3px 3px;
+  border-radius: 10px;
+  text-decoration: none;
+}
+
+.back-link:hover {
+  border-radius: 10px;
+  box-shadow: -3px -3px;
+  transition: 0.2s;
+}
+
+.back-link:active {
+ transform: translate(0.05em, 0.05em);
+ box-shadow: 0.05em 0.05em;
+}
+
+.country-section {
+  margin: 1rem;
+}
+
+form {
+  margin: 1rem;
+  text-align: center;
+}
+
+input {
+  padding: 0.5rem;
+  border: 2px solid black;
+  border-radius: 10px;
+  background-color: transparent;
+  width: 20rem;
+  font-size: larger;
+}
+
+input:focus {
+  background-color: white;
+  color: black;
+}
+
+input::placeholder {
+  font-size: large;
+}
+
+.country-visuals {
+  display: inline-grid;
+  grid-template-columns: 1fr 1fr;
+  align-content: center;
+  justify-content: center;
+  border: 2px solid black;
+  border-radius: 1rem;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.flag-info {
+  display: inline-block;
+  align-self: center;
+  gap: 0.2rem;
+  text-align: center;
+}
+
+.emblem-info {
+  display: inline;
+  align-self: center;
+  text-align: center;
+}
+
+
+.single-country-img {
+  max-width: 300px;
+}
+
+.single-country-coatofarms {
+  max-width: 200px;
+}
+
+.detailed-info {
+  display: grid;
+  gap: 0.7rem;
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+article {
+  margin-top: 2rem;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+@media screen and (max-width: 925px)  {
+  .country-visuals {
+  grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 750px)  {
+  .country-visuals {
+  grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 585px)  {
+  .country-visuals {
+  grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 750px)  {
+  article{
+    grid-template-columns: 1fr;
+  }
+}
+
+.spinner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  margin-top: 7rem;
+}
